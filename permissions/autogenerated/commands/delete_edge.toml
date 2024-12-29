@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-delete-edge"
+description = "Enables the delete_edge command without any pre-configured scope."
+commands.allow = ["delete_edge"]
+
+[[permission]]
+identifier = "deny-delete-edge"
+description = "Denies the delete_edge command without any pre-configured scope."
+commands.deny = ["delete_edge"]

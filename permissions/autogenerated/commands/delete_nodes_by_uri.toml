@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-delete-nodes-by-uri"
+description = "Enables the delete_nodes_by_uri command without any pre-configured scope."
+commands.allow = ["delete_nodes_by_uri"]
+
+[[permission]]
+identifier = "deny-delete-nodes-by-uri"
+description = "Denies the delete_nodes_by_uri command without any pre-configured scope."
+commands.deny = ["delete_nodes_by_uri"]

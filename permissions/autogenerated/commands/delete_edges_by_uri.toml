@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-delete-edges-by-uri"
+description = "Enables the delete_edges_by_uri command without any pre-configured scope."
+commands.allow = ["delete_edges_by_uri"]
+
+[[permission]]
+identifier = "deny-delete-edges-by-uri"
+description = "Denies the delete_edges_by_uri command without any pre-configured scope."
+commands.deny = ["delete_edges_by_uri"]

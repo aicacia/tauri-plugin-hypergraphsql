@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-create-edge"
+description = "Enables the create_edge command without any pre-configured scope."
+commands.allow = ["create_edge"]
+
+[[permission]]
+identifier = "deny-create-edge"
+description = "Denies the create_edge command without any pre-configured scope."
+commands.deny = ["create_edge"]
