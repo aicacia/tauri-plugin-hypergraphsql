@@ -52,6 +52,14 @@ export type NodeEdge<FN = object, TN = object, E = object> = {
 export declare function query<FN = object, TN = object, E = object>(filename: string, kind: "node_edge", query: Query): Promise<NodeEdge<FN, TN, E>[]>;
 export declare function query<N = object>(filename: string, kind: "node", query: Query): Promise<Node<N>[]>;
 export declare function query<E = object>(filename: string, kind: "edge", query: Query): Promise<Edge<E>[]>;
-export declare function createNode<T>(filename: string, uri: string, data: T): Promise<Node<T>[]>;
-export declare function createEdge<T>(filename: string, fromNodeId: number, toNodeId: number, uri: string, data?: T): Promise<Node<T>[]>;
+export declare function createNode<T>(filename: string, uri: string, data: T): Promise<Node<T>>;
+export declare function updateNode<T>(filename: string, nodeId: number, data: T): Promise<Node<T>>;
+export declare function deleteNode<T>(filename: string, nodeId: number): Promise<boolean>;
+export declare function deleteNodes<T>(filename: string, nodeIds: number[]): Promise<boolean>;
+export declare function deleteNodesByURI<T>(filename: string, uri: string): Promise<boolean>;
+export declare function createEdge<T>(filename: string, fromNodeId: number, toNodeId: number, uri: string, data?: T): Promise<Edge<T>>;
+export declare function updateEdge<T>(filename: string, edgeId: number, data?: T): Promise<Edge<T>>;
+export declare function deleteEdge<T>(filename: string, edgeId: number): Promise<boolean>;
+export declare function deleteEdges<T>(filename: string, edgeIds: number[]): Promise<boolean>;
+export declare function deleteEdgesByURI<T>(filename: string, uri: string): Promise<boolean>;
 export {};
