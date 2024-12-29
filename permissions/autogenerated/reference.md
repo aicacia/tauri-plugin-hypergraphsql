@@ -1,3 +1,26 @@
+## Default Permission
+
+This set of permissions describes the what kind of
+file system access the `hypergraphsql` plugin has enabled or denied by default.
+
+#### Granted Permissions
+
+This default permission set enables all.
+
+#### Included permissions within this default permission set:
+
+
+- `allow-create-edge`
+- `allow-create-node`
+- `allow-delete-edge`
+- `allow-delete-edges-by-uri`
+- `allow-delete-edges`
+- `allow-delete-node`
+- `allow-delete-nodes-by-uri`
+- `allow-delete-nodes`
+- `allow-query`
+- `allow-update-edge`
+- `allow-update-node`
 
 ## Permission Table
 
