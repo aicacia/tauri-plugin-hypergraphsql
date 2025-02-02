@@ -5,7 +5,7 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 name = "tauri-plugin-hypergraphsql"
 repository = "https://github.com/aicacia/tauri-plugin-hypergraphsql"
-rust-version = "1.82"
+rust-version = "1.56"
 version = "0.1.0"
 links = "tauri-plugin-hypergraphsql"
 
@@ -17,7 +17,7 @@ tauri-plugin = { version = "2", default-features = false }
 serde = { version = "1", default-features = false, features = ["derive"] }
 serde_json = { version = "1", default-features = false }
 
-hypergraphsql = { git = "http://github.com/aicacia/rs-hypergraphsql.git", rev = "856f92a" }
+hypergraphsql = { git = "http://github.com/aicacia/rs-hypergraphsql.git", rev = "73a36ff" }
 sqlx = { version = "0.8", default-features = false, features = [
   "sqlite",
   "runtime-tokio",
@@ -40,9 +40,9 @@ opt-level = 3
 [profile.release]
 panic = "abort"
 codegen-units = 1
-lto = true
+lto = "thin"
 incremental = false
-opt-level = "s"
+opt-level = "z"
 
 [package.metadata.docs.rs]
 rustc-args = ["--cfg", "docsrs"]

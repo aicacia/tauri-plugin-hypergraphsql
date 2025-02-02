@@ -8,7 +8,7 @@ lazy_static! {
     RwLock::new(ExpiringMap::new());
 }
 
-pub async fn get_or_create_pool(filename: String) -> Result<sqlx::SqlitePool, String> {
+pub async fn get_or_create(filename: String) -> Result<sqlx::SqlitePool, String> {
   let pool: sqlx::SqlitePool;
   'pool: {
     match SQLITE_POOLS.read() {
@@ -20,7 +20,7 @@ pub async fn get_or_create_pool(filename: String) -> Result<sqlx::SqlitePool, St
       }
       Err(e) => return Err(e.to_string()),
     };
-    pool = match hypergraphsql::create_pool(&filename, true).await {
+    pool = match hypergraphsql::create(&filename, true).await {
       Ok(p) => p,
       Err(e) => return Err(e.to_string()),
     };
