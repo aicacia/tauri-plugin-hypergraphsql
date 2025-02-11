@@ -1318,7 +1318,7 @@ dependencies = [
 [[package]]
 name = "hypergraphsql"
 version = "0.1.0"
-source = "git+http://github.com/aicacia/rs-hypergraphsql.git?rev=73a36ff#73a36ff8348dcac67bc5bad065a694cb466a2ef7"
+source = "git+http://github.com/aicacia/rs-hypergraphsql.git?rev=5de4f85#5de4f85774687f668ace266ae6ce22f0189fee8a"
 dependencies = [
  "chrono",
  "serde",
