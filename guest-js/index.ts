@@ -31,9 +31,9 @@ export type QueryExpr =
 	| QueryField
 	| QueryOp
 	| { [datafield: string]: QueryExpr };
-	export type QueryValue = null | boolean | string | number;
+export type QueryValue = null | boolean | string | number;
 
-	export type QueryOp =
+export type QueryOp =
 	| { eq: QueryExpr }
 	| { neq: QueryExpr }
 	| { gt: QueryExpr }
