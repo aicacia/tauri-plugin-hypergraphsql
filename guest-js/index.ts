@@ -26,14 +26,14 @@ export type QueryField =
 	| "to_node.updated_at"
 	| "to_node.created_at";
 
-type QueryExpr =
+export type QueryExpr =
 	| QueryValue
 	| QueryField
 	| QueryOp
 	| { [datafield: string]: QueryExpr };
-type QueryValue = null | boolean | string | number;
+	export type QueryValue = null | boolean | string | number;
 
-type QueryOp =
+	export type QueryOp =
 	| { eq: QueryExpr }
 	| { neq: QueryExpr }
 	| { gt: QueryExpr }

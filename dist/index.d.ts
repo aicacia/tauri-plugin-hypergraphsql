@@ -1,10 +1,10 @@
 export type QueryKind = "node_edge" | "node" | "edge";
 export type QueryField = "node.id" | "node.uri" | "node.data" | "node.updated_at" | "node.created_at" | "edge.id" | "edge.from_node_id" | "edge.to_node_id" | "edge.uri" | "edge.data" | "edge.updated_at" | "edge.created_at" | "from_node.id" | "from_node.uri" | "from_node.data" | "from_node.updated_at" | "from_node.created_at" | "to_node.id" | "to_node.uri" | "to_node.data" | "to_node.updated_at" | "to_node.created_at";
-type QueryExpr = QueryValue | QueryField | QueryOp | {
+export type QueryExpr = QueryValue | QueryField | QueryOp | {
     [datafield: string]: QueryExpr;
 };
-type QueryValue = null | boolean | string | number;
-type QueryOp = {
+export type QueryValue = null | boolean | string | number;
+export type QueryOp = {
     eq: QueryExpr;
 } | {
     neq: QueryExpr;
@@ -62,4 +62,3 @@ export declare function updateEdge<T>(filename: string, edgeId: number, data?: T
 export declare function deleteEdge<T>(filename: string, edgeId: number): Promise<boolean>;
 export declare function deleteEdges<T>(filename: string, edgeIds: number[]): Promise<boolean>;
 export declare function deleteEdgesByURI<T>(filename: string, uri: string): Promise<boolean>;
-export {};
